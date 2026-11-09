@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10233d">
+  <meta name="description" content="A clear, independent Norton security guide for installing device protection, activating a subscription, running scans, and fixing common issues.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Norton Security Guide: Installation, Activation & Safety Tips">
+  <meta property="og:description" content="Step-by-step, independent guidance to get started with Norton device protection and solve common problems.">
+  <title>Norton Security Guide: Install, Activate & Troubleshoot | Everyday Tech Guides</title>
+  <style>
+    :root{--navy:#10233d;--ink:#20324a;--muted:#627287;--line:#e2e8ef;--paper:#ffffff;--pale:#f5f8fc;--yellow:#ffce43;--teal:#0b7a77;--tint:#eaf8f6;--shadow:0 16px 45px rgba(21,40,68,.075);--rad:18px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:104px}
+    body{margin:0;color:var(--ink);background:#fff;font:16px/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+    button,a{ -webkit-tap-highlight-color:transparent }
+    a{color:#08726e;text-underline-offset:3px}a:hover{color:#075b58}
+    a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #00a5a2;outline-offset:4px;border-radius:5px}
+    .skip{position:absolute;top:-80px;left:20px;padding:10px 15px;background:white;color:#000;z-index:9999}.skip:focus{top:12px}
+    .reading-progress{height:3px;background:linear-gradient(90deg,#ffcb32,#0b9793);transform:scaleX(0);transform-origin:left;position:fixed;left:0;top:0;width:100%;z-index:100;pointer-events:none}
+    .topbar{background:var(--navy);color:#e6f2fa;text-align:center;padding:9px 15px;font-size:12px;letter-spacing:.02em}
+    .topbar strong{color:#ffe39b;font-weight:700}
+    header.site-header{background:rgba(255,255,255,.97);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:90;backdrop-filter:blur(14px)}
+    .container{max-width:1160px;margin:auto;padding-left:28px;padding-right:28px}
+    .header-row{height:76px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+    .brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--navy);font-size:18px;font-weight:800;letter-spacing:-.55px;white-space:nowrap}
+    .brand-logo{width:38px;height:38px;background:var(--navy);color:var(--yellow);border-radius:12px;display:grid;place-items:center;box-shadow:0 4px 14px #10233d1c}
+    .brand small{display:block;font-size:10px;font-weight:650;letter-spacing:1.8px;text-transform:uppercase;color:#6a7a8b;margin-top:-5px}
+    nav.main-nav{display:flex;align-items:center;gap:30px}nav.main-nav>a{text-decoration:none;color:#44556c;font-weight:650;font-size:13px;transition:color .2s}nav.main-nav>a:hover{color:var(--teal)}
+    .nav-cta{padding:11px 17px;border:1px solid #c9d8e2;border-radius:10px;color:var(--navy)!important}
+    .menu-btn{display:none;border:1px solid var(--line);border-radius:9px;background:#fff;color:var(--navy);font:inherit;font-weight:700;cursor:pointer;padding:8px 12px}
+    .hero{background:radial-gradient(circle at 85% 2%,#245575 0,transparent 34%),radial-gradient(circle at 44% 93%,#1b4d65 0,transparent 28%),linear-gradient(135deg,#10233d 0%,#142b43 100%);color:white;position:relative;overflow:hidden}
+    .hero::before{content:"";position:absolute;inset:0;opacity:.14;background-image:radial-gradient(#b6dbe7 1px,transparent 1px);background-size:23px 23px;mask-image:linear-gradient(90deg,transparent 25%,#000)}
+    .hero-grid{min-height:470px;padding-top:71px;padding-bottom:72px;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(290px,.85fr);align-items:center;gap:45px;position:relative}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#ffe099}
+    .eyebrow::before{content:"";width:24px;height:2px;background:var(--yellow)}
+    h1{font-size:clamp(38px,4.4vw,62px);line-height:1.09;letter-spacing:-2.6px;margin:19px 0 21px;max-width:700px;font-weight:800}
+    h1 em{color:#ffdc7b;font-style:normal}
+    .hero-description{font-size:17px;color:#ccdae4;line-height:1.7;max-width:600px;margin:0 0 28px}
+    .hero-buttons{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 19px;border-radius:10px;font-size:13px;font-weight:800;text-decoration:none;transition:transform .2s,background .2s;min-height:46px;border:0;cursor:pointer;font-family:inherit}
+    .btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--yellow);color:var(--navy)}.btn-primary:hover{background:#ffe18a;color:var(--navy)}
+    .btn-outline{border:1px solid #688194;color:white;background:transparent}.btn-outline:hover{background:#ffffff1a;color:#fff}
+    .hero-meta{display:flex;gap:24px;flex-wrap:wrap;margin-top:26px;font-size:12px;color:#b0c8d4}.hero-meta span{display:flex;gap:8px;align-items:center}
+    .hero-graphic{position:relative;min-height:325px;display:flex;align-items:center;justify-content:center}
+    .orbit{position:absolute;width:330px;height:330px;border:1px solid #ffffff25;border-radius:50%;box-shadow:0 0 0 36px #ffffff05,0 0 0 75px #ffffff05}
+    .device{width:268px;padding:12px;border:1px solid #7194a9;background:linear-gradient(135deg,#d5e9f3,#779db5);border-radius:18px 18px 9px 9px;position:relative;box-shadow:0 30px 55px #00172d66;transform:rotate(-5deg)}
+    .screen{height:175px;background:linear-gradient(145deg,#0c223e,#173a52);border-radius:11px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:11px}
+    .screen-shield{width:82px;height:82px;display:grid;place-items:center;background:#1d5961;border-radius:24px;color:var(--yellow);box-shadow:inset 0 0 0 1px #7ec5c54b}
+    .screen span{font-size:12px;font-weight:750;letter-spacing:.3px;color:#e3f7f5}
+    .device-base{height:13px;position:absolute;bottom:-19px;left:-17px;width:calc(100% + 34px);background:linear-gradient(180deg,#d5e4ef,#8ea9bc);border-radius:4px 4px 16px 16px}
+    .float-note{position:absolute;bottom:3px;right:-5px;background:#fff;color:var(--navy);border-radius:14px;padding:13px 17px;box-shadow:0 16px 25px #00122440;transform:rotate(4deg);font-size:12px;line-height:1.5;font-weight:750}
+    .float-note span{display:flex;align-items:center;gap:7px;color:#148a75;margin-bottom:2px}
+    .notice{background:#f9fbfd;border-bottom:1px solid var(--line);font-size:12px;color:#5d6e81}
+    .notice .container{padding-top:15px;padding-bottom:15px;display:flex;gap:10px;align-items:flex-start}
+    .notice svg{flex:none;margin-top:1px;color:#167e80}
+    .article-layout{display:grid;grid-template-columns:236px minmax(0,1fr);gap:60px;align-items:start;padding-top:55px;padding-bottom:72px}
+    .sidebar{position:sticky;top:112px}
+    .toc-title{font-size:11px;letter-spacing:1.5px;font-weight:850;text-transform:uppercase;color:#7a8b9e;margin:0 0 17px}
+    .toc{border-left:1px solid #dce4eb;display:flex;flex-direction:column;gap:4px;padding-left:0}
+    .toc a{display:block;border-left:2px solid transparent;color:#728198;text-decoration:none;font-size:13px;font-weight:650;padding:8px 10px 8px 17px;margin-left:-1px;line-height:1.45}
+    .toc a:hover,.toc a.active{border-left-color:#0a8e88;color:var(--teal);background:#f0faf8}
+    .sidebar-help{margin-top:35px;padding:21px;background:#f4f8fa;border:1px solid #e5edf1;border-radius:15px}
+    .sidebar-help strong{font-size:13px;display:block;color:var(--navy)}.sidebar-help p{font-size:12px;color:#66788a;margin:7px 0 13px;line-height:1.6}
+    .sidebar-help a{font-size:12px;font-weight:800;text-decoration:none}
+    .article{min-width:0;max-width:820px}
+    .article-head{display:flex;gap:10px;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap}
+    .tag{font-size:11px;font-weight:850;background:#e7f6f3;color:#086762;text-transform:uppercase;letter-spacing:1px;border-radius:100px;padding:6px 11px}
+    .share{background:#fff;border:1px solid var(--line);padding:8px 11px;border-radius:9px;color:#50637d;font-size:12px;font-weight:700;cursor:pointer}
+    .share:hover{border-color:#99c3c0;color:var(--teal)}
+    .lead{font-size:18px;color:#495a6e;line-height:1.85;margin:0 0 34px}
+    .article section{margin:0 0 45px;scroll-margin-top:110px}
+    .article h2{font-size:clamp(24px,2.5vw,31px);letter-spacing:-1.1px;line-height:1.22;color:var(--navy);margin:0 0 16px}
+    .article h3{font-size:18px;letter-spacing:-.45px;color:var(--navy);line-height:1.35;margin:20px 0 9px}
+    .article p{margin:0 0 16px}.article ul{padding-left:23px;margin:9px 0 18px}.article li{padding-left:3px;margin-bottom:10px}
+    .section-label{color:var(--teal);font-weight:900;letter-spacing:2.2px;font-size:11px;text-transform:uppercase;display:block;margin-bottom:9px}
+    .section-intro{color:#66788a;margin-bottom:21px!important}
+    .quick-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin-top:22px}
+    .quick-card{border:1px solid var(--line);padding:20px;border-radius:14px;background:#fff;box-shadow:0 4px 15px #10233d06}
+    .num{width:35px;height:35px;border-radius:11px;background:var(--navy);color:#ffe18a;font-size:14px;font-weight:900;display:grid;place-items:center;margin-bottom:16px}
+    .quick-card strong{display:block;color:var(--navy);font-size:15px;margin-bottom:6px}.quick-card p{font-size:13px;line-height:1.6;color:#6b7b8b;margin:0}
+    .steps{list-style:none;padding:0!important;margin:24px 0 18px!important;counter-reset:step}
+    .steps li{counter-increment:step;position:relative;padding:0 0 0 54px!important;min-height:42px;margin-bottom:21px!important}
+    .steps li::before{content:counter(step);position:absolute;left:0;top:0;width:33px;height:33px;border:1px solid #bcdeda;background:#eff9f7;color:#007c75;display:grid;place-items:center;border-radius:50%;font-size:13px;font-weight:900}
+    .steps li strong{display:block;color:#20384e;margin-bottom:2px}.steps li span{display:block;color:#66778b;font-size:14px}
+    .callout{background:#f0f8f8;border:1px solid #cfe8e4;border-left:4px solid #0b8d82;padding:19px 21px;border-radius:0 13px 13px 0;margin:22px 0}
+    .callout strong{color:#0b6863;display:block;font-size:14px;margin-bottom:5px}.callout p{font-size:14px;color:#486b6d;margin:0;line-height:1.65}
+    .soft-box{background:#f6f8fb;border:1px solid #e6ebf1;padding:24px;border-radius:16px}
+    .tips-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin-top:20px}
+    .tip{border:1px solid #e4eaf0;background:white;padding:18px;border-radius:13px}
+    .tip svg{color:#138a7c;margin-bottom:5px}.tip h3{font-size:15px;margin:5px 0 5px}.tip p{font-size:13px;color:#6c7d8d;line-height:1.6;margin:0}
+    .trouble{display:grid;gap:12px}.trouble-item{display:grid;grid-template-columns:32px 1fr;gap:11px;padding:16px 18px;border:1px solid var(--line);border-radius:13px;background:#fff}
+    .trouble-item .symbol{width:30px;height:30px;display:grid;place-items:center;background:#fff3db;color:#8a6000;border-radius:8px;font-weight:900}
+    .trouble-item h3{font-size:15px;margin:0 0 5px}.trouble-item p{font-size:13px;color:#66798b;line-height:1.65;margin:0}
+    details{border:1px solid #e0e8ee;border-radius:12px;margin-bottom:10px;background:white;overflow:hidden}
+    summary{padding:17px 18px;color:var(--navy);font-weight:800;font-size:14px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px;align-items:center}
+    summary::-webkit-details-marker{display:none}summary::after{content:'+';font-size:22px;color:var(--teal);font-weight:400}details[open] summary::after{content:'−'}
+    details p{padding:0 18px 18px;font-size:14px;color:#68778a;margin:0!important;line-height:1.7}
+    .resources{display:grid;gap:10px;margin-top:22px}.resource{display:flex;align-items:center;justify-content:space-between;gap:15px;background:#f7f9fc;padding:14px 18px;border-radius:11px;border:1px solid #e5ebf0;text-decoration:none;font-weight:750;font-size:13px;color:#123950}
+    .resource:hover{border-color:#8fc9c4;background:#f0faf8;color:#086b65}.resource span:last-child{font-size:19px;font-weight:400}
+    .end-card{background:linear-gradient(135deg,#10233d,#1b4555);border-radius:21px;padding:33px;color:white;margin:38px 0 0}
+    .end-card h2{color:#fff;margin:10px 0!important}.end-card p{color:#d5e6ef;margin-bottom:22px}.end-card .eyebrow{color:#ffe099}
+    footer{background:#0e2035;color:#b7cada;padding:34px 0 26px}
+    .footer-grid{display:flex;justify-content:space-between;gap:30px;align-items:start;flex-wrap:wrap}.footer-brand{font-weight:900;color:#fff;font-size:17px;letter-spacing:-.4px}
+    footer p{max-width:600px;font-size:12px;line-height:1.8;margin:8px 0 0}.footer-links{display:flex;gap:18px;flex-wrap:wrap}footer a{color:#ebf7f7;font-size:12px;text-decoration:none}footer a:hover{color:#ffdf8a}
+    .footer-bottom{border-top:1px solid #ffffff1a;margin-top:26px;padding-top:19px;font-size:11px;color:#92aaba}
+    .back-top{position:fixed;bottom:24px;right:24px;z-index:70;background:#10233d;color:#fff;border:1px solid #34506b;box-shadow:0 8px 20px #001d3530;width:42px;height:42px;border-radius:50%;cursor:pointer;display:none;font-size:20px}.back-top.show{display:block}
+    @media(max-width:980px){.hero-grid{gap:15px}.hero-graphic{transform:scale(.86)}.article-layout{gap:32px;grid-template-columns:210px minmax(0,1fr)}}
+    @media(max-width:760px){.container{padding-left:19px;padding-right:19px}.header-row{height:68px}.menu-btn{display:inline-block}nav.main-nav{display:none;position:absolute;top:68px;left:0;right:0;padding:16px 20px 22px;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 15px 25px #0e203518;align-items:stretch;flex-direction:column;gap:15px}nav.main-nav.open{display:flex}nav.main-nav>a{font-size:14px}.nav-cta{text-align:center}.hero-grid{grid-template-columns:1fr;padding-top:55px;padding-bottom:54px;gap:10px}.hero-graphic{display:none}.hero-description{font-size:15px}h1{font-size:clamp(36px,8.2vw,55px);letter-spacing:-1.8px}.article-layout{display:block;padding-top:35px;padding-bottom:52px}.sidebar{display:none}.lead{font-size:16px}.quick-grid{grid-template-columns:1fr}.quick-card{display:grid;grid-template-columns:40px 1fr;gap:0 12px;align-items:start}.num{grid-row:span 2;margin-bottom:0}.quick-card strong{margin:0}.quick-card p{grid-column:2}.tips-grid{grid-template-columns:1fr}.article section{margin-bottom:39px}.article h2{font-size:26px}.end-card{padding:26px}.topbar{font-size:11px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+    @media print{header.site-header,.topbar,.reading-progress,.back-top,.hero-buttons,.sidebar,.share{display:none!important}.hero{color:#14233d;background:white}.hero::before,.hero-graphic{display:none}.hero-grid{min-height:auto;display:block;padding:20px 0}.hero h1,.hero h1 em{color:#14233d}.hero-description,.hero-meta{color:#48566a}.article-layout{display:block;padding-top:20px}.article{max-width:none}.article section{break-inside:avoid}a{color:#123d4b}footer{background:#fff;color:#555}}
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"Norton Security Guide: Installation, Activation and Troubleshooting","description":"Independent step-by-step guide to installing Norton, activating a subscription, running scans and fixing common issues.","inLanguage":"en","author":{"@type":"Organization","name":"Everyday Tech Guides"},"publisher":{"@type":"Organization","name":"Everyday Tech Guides"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"Where should I download Norton?","acceptedAnswer":{"@type":"Answer","text":"Use your Norton account or Norton's official website and follow the product's download instructions. Avoid unofficial installers."}},
+    {"@type":"Question","name":"Do I need a product key to reinstall Norton?","acceptedAnswer":{"@type":"Answer","text":"If your subscription is already linked to your Norton account, you can usually reinstall through your account without entering a new product key."}},
+    {"@type":"Question","name":"What if my Norton product key does not work?","acceptedAnswer":{"@type":"Answer","text":"Check the key for typing mistakes, verify it matches your product and region, and use the official Norton setup and support pages."}},
+    {"@type":"Question","name":"How often should I scan my computer?","acceptedAnswer":{"@type":"Answer","text":"Keep real-time protection enabled, allow automatic updates, and run additional scans if you notice suspicious behavior or have a specific concern."}},
+    {"@type":"Question","name":"Is this website official Norton support?","acceptedAnswer":{"@type":"Answer","text":"No. This page is an independent educational guide and is not affiliated with, endorsed by, or operated by Norton."}}
+  ]}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to article</a>
+  <div class="reading-progress" id="readingProgress" aria-hidden="true"></div>
+  <div class="topbar"><strong>Independent informational guide</strong> — Not affiliated with, endorsed by, or operated by Norton.</div>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="#top" aria-label="Everyday Tech Guides homepage">
+        <span class="brand-logo" aria-hidden="true">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 2 4.5 5v6c0 5.2 3.3 8.6 7.5 11 4.2-2.4 7.5-5.8 7.5-11V5L12 2Z"/><path d="m8 12 2.6 2.6L16 9"/></svg>
+        </span>
+        <span>Everyday Tech<small>GUIDES &amp; HOW-TOS</small></span>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-controls="mainNav" aria-expanded="false">☰ Menu</button>
+      <nav id="mainNav" class="main-nav" aria-label="Main navigation">
+        <a href="#overview">Overview</a><a href="#installation">Installation</a><a href="#activation">Activation</a><a href="#troubleshooting">Troubleshooting</a><a class="nav-cta" href="#faqs">Common Questions</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="top" class="hero" aria-labelledby="heroTitle">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Complete beginner-friendly guide</span>
+        <h1 id="heroTitle">Norton Security Guide: <em>Simple Steps, Safer Devices.</em></h1>
+        <p class="hero-description">Learn how to install Norton, activate your subscription, run a security scan, and handle common setup problems — without the technical jargon.</p>
+        <div class="hero-buttons"><a class="btn btn-primary" href="#installation">Explore the Guide <span aria-hidden="true">→</span></a><a class="btn btn-outline" href="https://support.norton.com/" target="_blank" rel="noopener noreferrer">Official Norton Support <span aria-hidden="true">↗</span></a></div>
+        <div class="hero-meta"><span>✓ Step-by-step instructions</span><span>✓ Practical safety tips</span><span>✓ Free educational article</span></div>
+      </div>
+      <div class="hero-graphic" aria-hidden="true">
+        <div class="orbit"></div>
+        <div class="device"><div class="screen"><div class="screen-shield"><svg width="53" height="53" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 7.5 3v6c0 5.4-3.2 8.5-7.5 11-4.3-2.5-7.5-5.6-7.5-11V5L12 2Z"/><path d="m8 12 2.5 2.5L16 9"/></svg></div><span>SECURITY ESSENTIALS</span></div><div class="device-base"></div></div>
+        <div class="float-note"><span>✓ A simpler approach</span>Install • Activate • Scan</div>
+      </div>
+    </div>
+  </section>
+  <div class="notice"><div class="container"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 11v6M12 7h.01"/></svg><span><strong>Transparency note:</strong> This blog is a third-party educational resource. Norton and related product names are trademarks of their respective owners. For account, payment, or product-specific assistance, always use the official Norton website.</span></div></div>
+
+  <main id="main" class="container article-layout">
+    <aside class="sidebar" aria-label="Article table of contents">
+      <p class="toc-title">On this page</p>
+      <nav class="toc" id="toc"><a href="#overview">01 &nbsp; Getting started</a><a href="#installation">02 &nbsp; Download &amp; install</a><a href="#activation">03 &nbsp; Activate Norton</a><a href="#scanning">04 &nbsp; Run a scan</a><a href="#tips">05 &nbsp; Security best practices</a><a href="#troubleshooting">06 &nbsp; Common issues</a><a href="#faqs">07 &nbsp; FAQs</a><a href="#resources">08 &nbsp; Official resources</a></nav>
+      <div class="sidebar-help"><strong>Need product-specific help?</strong><p>Check Norton’s official help center for the latest instructions and account assistance.</p><a href="https://support.norton.com/" target="_blank" rel="noopener noreferrer">Visit official help center ↗</a></div>
+    </aside>
+    <article class="article">
+      <div class="article-head"><span class="tag">Cybersecurity basics</span><button class="share" id="copyLink" type="button" aria-label="Copy this article link">↗ Copy article link</button></div>
+      <p class="lead">Setting up device protection should not be complicated. Whether you are installing Norton on a new computer, reconnecting an existing subscription, or checking your device for threats, this guide explains the essentials in plain English.</p>
+
+      <section id="overview" aria-labelledby="overviewTitle">
+        <span class="section-label">01 / Overview</span><h2 id="overviewTitle">Get started in three simple steps</h2>
+        <p class="section-intro">The basic process is straightforward. Exact screens and options may vary by device, subscription, and software version.</p>
+        <div class="quick-grid">
+          <div class="quick-card"><div class="num">01</div><strong>Download safely</strong><p>Sign in to your account and get the installer from an official source.</p></div>
+          <div class="quick-card"><div class="num">02</div><strong>Activate access</strong><p>Link or verify your subscription with the correct Norton account.</p></div>
+          <div class="quick-card"><div class="num">03</div><strong>Check protection</strong><p>Confirm your protection status, run a scan, and install updates.</p></div>
+        </div>
+      </section>
+
+      <section id="installation" aria-labelledby="installationTitle">
+        <span class="section-label">02 / Installation</span><h2 id="installationTitle">How to download and install Norton</h2>
+        <p>For a Windows PC with an existing Norton subscription, start from your Norton account. These are the general steps described in Norton’s installation help article.</p>
+        <ol class="steps">
+          <li><strong>Open the Norton account website.</strong><span>Visit <a href="https://my.norton.com/" target="_blank" rel="noopener noreferrer">my.norton.com</a> and sign in using the account associated with your subscription.</span></li>
+          <li><strong>Find your active subscription.</strong><span>From the account dashboard or subscriptions section, look for the device security product you want to install.</span></li>
+          <li><strong>Choose the download option.</strong><span>Use the on-screen Download or equivalent installation action for your device.</span></li>
+          <li><strong>Run the installer.</strong><span>Open the downloaded file and follow the prompts. Allow required system permissions only after confirming the file came from the official source.</span></li>
+          <li><strong>Finish setup and confirm status.</strong><span>Open the app, follow any sign-in prompts, and review the protection dashboard.</span></li>
+        </ol>
+        <div class="callout"><strong>Important: Avoid unknown download links</strong><p>Use your Norton account or the official app store route for your device. Be cautious with unsolicited emails, pop-ups, and third-party “repair tools” that claim you must install something urgently.</p></div>
+        <p>Using a Mac or mobile device? The <a href="https://support.norton.com/sp/en/us/norton-download-install/current/solutions/kb20090708112600EN" target="_blank" rel="noopener noreferrer">official installation guide</a> includes instructions for supported platforms. Availability and app features vary.</p>
+      </section>
+
+      <section id="activation" aria-labelledby="activationTitle">
+        <span class="section-label">03 / Activation</span><h2 id="activationTitle">How to activate your Norton subscription</h2>
+        <p>If you purchased directly and your plan already appears in your account, signing in may be all you need. If you bought a retail product or received a product key, follow the approved activation path.</p>
+        <ol class="steps">
+          <li><strong>Locate your purchase information.</strong><span>Check your order confirmation, retail card, or the subscription details in your account.</span></li>
+          <li><strong>Go to the official setup page.</strong><span>For applicable retail purchases, open <a href="https://www.norton.com/setup" target="_blank" rel="noopener noreferrer">norton.com/setup</a>.</span></li>
+          <li><strong>Enter the key if requested.</strong><span>Follow the on-screen steps to redeem it and associate the subscription with your account.</span></li>
+          <li><strong>Complete the setup.</strong><span>Download or launch the app and confirm the subscription is active on your device.</span></li>
+        </ol>
+        <div class="soft-box"><strong>What does a Norton product key look like?</strong><p style="margin:5px 0 0;font-size:14px;color:#64758a">Norton describes its common retail product key as a 25-character alphanumeric code, typically in five groups. Treat it like a valuable purchase credential: never share a real key in a public chat, form, or comment.</p></div>
+      </section>
+
+      <section id="scanning" aria-labelledby="scanningTitle">
+        <span class="section-label">04 / Device protection</span><h2 id="scanningTitle">Run scans and keep protection updated</h2>
+        <p>Once installation is complete, open your Norton device security app and check its protection status. Depending on the app version, scan controls may appear under <strong>Security</strong>, <strong>Scans</strong>, or a similar menu.</p>
+        <h3>Which scan should you choose?</h3>
+        <ul>
+          <li><strong>Quick Scan:</strong> checks commonly targeted areas and is useful for a fast review.</li>
+          <li><strong>Full Scan:</strong> examines a broader range of files and may take longer.</li>
+          <li><strong>Custom Scan:</strong> lets you check selected files, folders, or drives where supported.</li>
+        </ul>
+        <p>Keep automatic protection and security updates enabled. If a scan reports a threat, read the result carefully and use the remediation steps offered by the app rather than downloading unrelated third-party tools.</p>
+        <div class="callout"><strong>Menu labels can change</strong><p>Security software interfaces change over time. If a button in this article is not visible, search the <a href="https://support.norton.com/" target="_blank" rel="noopener noreferrer">official help center</a> for your exact product name and device.</p></div>
+      </section>
+
+      <section id="tips" aria-labelledby="tipsTitle">
+        <span class="section-label">05 / Good habits</span><h2 id="tipsTitle">Four habits that help keep devices safer</h2>
+        <p class="section-intro">Antivirus protection is one layer of security. These everyday practices matter just as much.</p>
+        <div class="tips-grid">
+          <div class="tip"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 17v-5M9 10h6M5 10V7a7 7 0 0 1 14 0v3"/><rect x="4" y="10" width="16" height="12" rx="2"/></svg><h3>Use strong sign-ins</h3><p>Choose unique passwords, use a password manager, and turn on multi-factor authentication where available.</p></div>
+          <div class="tip"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15-6l3 3M21 12a9 9 0 0 1-15 6l-3-3"/><path d="M21 3v6h-6M3 21v-6h6"/></svg><h3>Install updates</h3><p>Keep your operating system, browser, apps, and security tools up to date.</p></div>
+          <div class="tip"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg><h3>Question urgent messages</h3><p>Do not trust pop-ups or emails that demand immediate calls, payments, or remote access.</p></div>
+          <div class="tip"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="18" height="15" rx="2"/><path d="M8 22h8M12 19v3M7 10h10M7 14h7"/></svg><h3>Back up important files</h3><p>Maintain backups using a trusted local or cloud solution and test that they can be restored.</p></div>
+        </div>
+      </section>
+
+      <section id="troubleshooting" aria-labelledby="troubleshootingTitle">
+        <span class="section-label">06 / Troubleshooting</span><h2 id="troubleshootingTitle">Common Norton setup problems</h2>
+        <p class="section-intro">Use these safe first checks before trying advanced troubleshooting.</p>
+        <div class="trouble">
+          <div class="trouble-item"><span class="symbol">!</span><div><h3>The download will not start</h3><p>Check your internet connection and browser downloads. On Windows, Ctrl + J commonly opens the browser’s download list. If needed, restart the download from your official account page.</p></div></div>
+          <div class="trouble-item"><span class="symbol">!</span><div><h3>The product key is not accepted</h3><p>Check for typing mistakes, confirm the key matches your purchase, and follow <a href="https://support.norton.com/sp/en/us/home/current/solutions/v89978947" target="_blank" rel="noopener noreferrer">Norton’s product-key instructions</a>. Never post the key publicly.</p></div></div>
+          <div class="trouble-item"><span class="symbol">!</span><div><h3>The app appears to be out of date</h3><p>Connect to the internet, open the application’s update or status area, and follow its update guidance. Restart the device if the official instructions require it.</p></div></div>
+          <div class="trouble-item"><span class="symbol">!</span><div><h3>A pop-up says your computer is infected</h3><p>Do not call a number from the pop-up or grant remote access. Close the suspicious page and inspect your device using the security software you deliberately installed.</p></div></div>
+        </div>
+      </section>
+
+      <section id="faqs" aria-labelledby="faqsTitle">
+        <span class="section-label">07 / Frequently asked questions</span><h2 id="faqsTitle">Answers to common questions</h2>
+        <details><summary>Where should I download Norton?</summary><p>Use your Norton account or Norton’s official website. For some platforms, the app may be installed through an official app store. Avoid downloads from unknown advertisements or unsolicited messages.</p></details>
+        <details><summary>Do I need a product key to reinstall Norton?</summary><p>If your subscription is already linked to your Norton account, you can usually reinstall through that account without entering a new product key. Follow the instructions shown for your particular plan.</p></details>
+        <details><summary>What if my Norton product key does not work?</summary><p>Recheck the characters and confirm that the key belongs to your purchase. Use Norton’s official product key and setup instructions to diagnose further.</p></details>
+        <details><summary>How often should I scan my computer?</summary><p>Leave real-time protection and updates enabled. You can run additional scans if you notice unusual behavior, downloaded a suspicious file, or simply want to review the device’s status.</p></details>
+        <details><summary>Is this website official Norton support?</summary><p>No. Everyday Tech Guides is an independent educational resource and is not affiliated with Norton. For subscription billing, technical support, or account changes, visit the official Norton help center.</p></details>
+      </section>
+
+      <section id="resources" aria-labelledby="resourcesTitle">
+        <span class="section-label">08 / Trusted links</span><h2 id="resourcesTitle">Official resources worth bookmarking</h2>
+        <p>Product requirements and software screens can change. These Norton-owned pages are the best starting point for the latest instructions.</p>
+        <div class="resources">
+          <a class="resource" href="https://my.norton.com/" target="_blank" rel="noopener noreferrer"><span>My Norton — sign in and manage subscriptions</span><span aria-hidden="true">↗</span></a>
+          <a class="resource" href="https://support.norton.com/sp/en/us/norton-download-install/current/solutions/kb20090708112600EN" target="_blank" rel="noopener noreferrer"><span>Official installation instructions</span><span aria-hidden="true">↗</span></a>
+          <a class="resource" href="https://support.norton.com/sp/en/us/home/current/solutions/v89978947" target="_blank" rel="noopener noreferrer"><span>Product key and activation help</span><span aria-hidden="true">↗</span></a>
+          <a class="resource" href="https://support.norton.com/" target="_blank" rel="noopener noreferrer"><span>Official Norton support center</span><span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+      <div class="end-card"><span class="eyebrow">Your next step</span><h2>Make security a regular habit.</h2><p>Install from trusted sources, confirm your subscription, and check for updates. For account-related problems, use Norton's official support resources.</p><a href="https://support.norton.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Go to Official Norton Help <span aria-hidden="true">↗</span></a></div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid"><div><div class="footer-brand">Everyday Tech Guides</div><p>Easy-to-follow guides for everyday digital safety. This independent blog does not sell Norton subscriptions, provide Norton technical support, or collect product keys.</p></div><div class="footer-links"><a href="#overview">Back to guide</a><a href="#faqs">FAQs</a><a href="https://support.norton.com/" target="_blank" rel="noopener noreferrer">Norton official site</a></div></div>
+      <div class="footer-bottom">© <span id="year">2026</span> Everyday Tech Guides. Independent editorial content. Norton is a trademark of its respective owner. No affiliation or endorsement is implied.</div>
+    </div>
+  </footer>
+  <button class="back-top" id="backTop" type="button" aria-label="Back to top">↑</button>
+  <script>
+    (() => {
+      const menuBtn = document.getElementById('menuBtn');
+      const nav = document.getElementById('mainNav');
+      const topBtn = document.getElementById('backTop');
+      const progress = document.getElementById('readingProgress');
+      const copyBtn = document.getElementById('copyLink');
+      document.getElementById('year').textContent = new Date().getFullYear();
+      menuBtn.addEventListener('click', () => {
+        const open = nav.classList.toggle('open');
+        menuBtn.setAttribute('aria-expanded', String(open));
+        menuBtn.textContent = open ? '✕ Close' : '☰ Menu';
+      });
+      nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰ Menu';
+      }));
+      function onScroll(){
+        const available = document.documentElement.scrollHeight - window.innerHeight;
+        progress.style.transform = `scaleX(${available > 0 ? Math.min(1,window.scrollY/available) : 0})`;
+        topBtn.classList.toggle('show',window.scrollY>600);
+      }
+      window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+      topBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}));
+      const links = [...document.querySelectorAll('.toc a')];
+      if('IntersectionObserver' in window){
+        const observer = new IntersectionObserver(entries => {
+          const visible = entries.filter(e=>e.isIntersecting).sort((a,b)=>a.boundingClientRect.top-b.boundingClientRect.top);
+          if(visible.length){const id='#'+visible[0].target.id;links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')===id));}
+        },{rootMargin:'-105px 0px -66% 0px',threshold:0});
+        document.querySelectorAll('article section[id]').forEach(section=>observer.observe(section));
+      }
+      copyBtn.addEventListener('click',async()=>{
+        const url = location.href.split('#')[0];
+        try{
+          if(navigator.clipboard && window.isSecureContext){await navigator.clipboard.writeText(url)}
+          else{const input=document.createElement('textarea');input.value=url;input.style.position='fixed';input.style.opacity='0';document.body.appendChild(input);input.select();if(!document.execCommand('copy'))throw Error('Copy unavailable');input.remove()}
+          copyBtn.textContent='✓ Link copied';setTimeout(()=>copyBtn.textContent='↗ Copy article link',1800);
+        }catch(e){copyBtn.textContent='Copy from address bar';setTimeout(()=>copyBtn.textContent='↗ Copy article link',2500)}
+      });
+    })();
+  </script>
+</body>
+</html>
